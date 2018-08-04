@@ -1,0 +1,82 @@
+{
+    "plasser": [
+	{
+	    "navn": "strandkant",
+	    "beskrivelse": "Du er i strankanten. Om du går øst, går du ca 20m ut til midten av stranda. Nordover er det etter en 30m, et skogholt med masse grøn og frodig vegitasjon",
+	    "ting": ["kniv"],
+	    "muligeveier":["skogholt","stranda"]
+	},
+	{
+	    "navn": "skogholt",
+	    "beskrivelse": "Du har gått opp til skog holtet. Du synes du ser noe bak buskene. du tør ikke å gå videre.",
+	    "ting": ["lommelykt"],
+	    "muligeveier":["strandkant"]
+	},
+	{
+	    "navn": "stranda",
+	    "beskrivelse": "Du står mitt på stranda. Det er ikke noe spesielt å se på her. Men når du kom satte du i et skrik da du trakket på øksen i sanden. Du trenger noe å rense såre med, og noe å bandasjere det opp med",
+	    "ting": ["øks"],
+	    "muligeveier":["strandkant","hule"]
+	},
+	{
+            "navn": "hule",
+            "beskrivelse": "Du har kommet til en hule. Når du gikk inn i hulen finner du en stige. Det er ikke noe spesielt du vil ta med deg videre",
+            "ting": [""],
+            "muligeveier":["stranda","stige"]
+        },
+	{
+            "navn": "stige",
+            "beskrivelse": "Du kom fra hulen og gikk ned stigen du fant. Når du kom ned fant du noe som minnet om et økseskaft, men den er litt større. Du synes du ser noe interesant lenger framme.",
+            "ting": ["piggøksseskaft"],
+            "muligeveier":["selle","hule"]
+        },
+	{
+            "navn": "selle",
+            "beskrivelse": "Du så noe interesant og gikk bort til det. Det viste seg at det var en selle. inne i sellen er det et kjellet. Du ser en liten beinsplint som du tenker at du kan bruke senere.",
+            "ting": ["beinsplint"],
+            "muligeveier":["veikryss","stige"]
+        },
+	{
+            "navn": "veikryss1",
+            "beskrivelse": "Du har gått videre og har møt et veikryss. den ene vien ser ut som leder til et lager og en andre leder til en lagn gang med seller som den bak deg.",
+            "ting": [""],
+            "muligeveier":["selle","sellegang","oppbevaring"]
+        },
+	{
+            "navn": "sellegang",
+            "beskrivelse": "Sellene her er ganske like den du så tidligere, med den er litt større. Det er fire seller og to til tre skjeletter i hver selle. Du titter rundt gjørne og ser en blindvei.",
+            "ting": ["beinsplint","ribbein"],
+            "muligeveier":["blindvei","veikryss"]
+        },
+	{
+            "navn": "blindvei",
+            "beskrivelse": "Du har gått rundt gjørnet og ser på en blindvei. Denne veien var bare bortkastet tid... Men plutselig ser du et piggøks hode.",
+            "ting": ["piggøkshode"],
+            "muligeveier":["sellegang"]
+        },
+	{
+            "navn": "lager",
+            "beskrivelse": "Du har gått inn fra veikrysset. Den høgre veggen er stappet full av esker. På noen av eskene står det skrevet med store bokstaver. DYNAMITT",
+            "ting": ["dynamitt"],
+            "muligeveier":["kassevegg","veikryss"]
+        },
+	{
+            "navn": "lagerhjørne",
+            "beskrivelse": "Du har kommet til et gjørne fylt med esker fra gulv til tak. Du finner ikke noe interesant.",
+            "ting": [""],
+            "muligeveier":["tomgang","lager"]
+        },
+	{
+            "navn": "tomgang",
+            "beskrivelse": "Du har kommet til en tom gang. Dette er bare en liten, trang gang med masse småstein.",
+            "ting": ["småstein"],
+            "muligeveier":["steinvegg","lagerhjørne"]
+        },
+	{
+            "navn": "steinvegg",
+            "beskrivelse": "Dette var en bomtur. Men plutselig ser du et lysglimt igjennom veggen. Kan du komme deg igjennom?",
+            "ting": ["småstein"],
+            "muligeveier":["tomgang"]
+        }
+    ]
+}
