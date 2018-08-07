@@ -1,3 +1,5 @@
+# coding: utf-8
+
 #!/usr/bin/ruby
 # coding: utf-8
 
@@ -6,9 +8,9 @@ require 'pp'
 
 def welcome
   sleep(0.5)
-  puts"Navnet på spillet"
+  puts"Navnet pa spillet"
   sleep(1.5)
-  puts "Skrevet av Sebastian Jøssang og Asbjørn Thorsen"
+  puts "Skrevet av Sebastian Jossang og Asbjorn Thorsen"
   sleep(1.5)
 end
 
@@ -23,6 +25,7 @@ def clear
 end
 
 def hjelp
+  clear()
   puts "Dette er en liste over mulige kommandoer:"
   puts "\u2712 " + "N"
   puts "\u2712 " + "S"
@@ -30,46 +33,43 @@ def hjelp
   puts "\u2712 " + "V"
   puts "Trykk enter for å fortsette."
   gets
-  clear()
+  #clear()
   kommando()
 end
 
-
-
-def kommando
+def kommando_spørsmål
   print "Skriv hjelp for oversikt over kommandoer.\n"
   print "\u2712 " + "Din kommando? "
-  hjelp = gets.chomp.downcase
-  if (hjelp == "hjelp")
+  kommando = gets.chomp.downcase
+  return kommando
+  kommandoer(kommando)
+end
+kommando = kommando_spørsmål()
+
+def kommandoer(kommando)
+  kommando = kommando_spørsmål()
+  puts kommando
+  if (kommando == "hjelp")
     hjelp()
-  else
-    return hjelp
+  elsif (kommando == "whereami")
+    whereami()
   end
 end
 
-def hvor
-  puts posisjon
-end
-
-def posisjon
-
-  return #posisjonen din
-end
-
 def hent_fil
-  file = File.read('/Users/asbjornt/programmering/ruby/map.json')
+  file = File.read('/home/sebastian/git/sebastian/map.json')
   data_hash = JSON.parse(file)
   return data_hash
 end
 
 def start(kart)
-  kommando = kommando()
+  kommando_spørsmål()
 end
 
-clear()
-#welcome()
 #clear()
-kart = hent_fil()
-start(kart['plasser'][0])
+#welcome()
+#kart = hent_fil()
+#start(kart['plasser'][0])
+
 
 #puts kart['plasser'][0]['navn']
